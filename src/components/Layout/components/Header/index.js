@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCircleQuestion,
-    faCloudUpload,
     faCoins,
     faEarthAsia,
     faEllipsisVertical,
@@ -26,6 +25,8 @@ import Menu from '~/components/Popper/Menu';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import images from '~/assets/images';
 import AccountItem from '~/components/AccountItem';
+import { UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -142,7 +143,7 @@ function Header() {
                         <>
                             <Tippy content="Upload" placement="bottom" duration={[0, 200]}>
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -154,10 +155,11 @@ function Header() {
                     )}
                     <Menu items={currentUser ? USERMENU : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
-                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-aiso/e7b9db475cba9fa98f1b7e055bf6712d~c5_100x100.jpeg?x-expires=1658988000&x-signature=Z8Dr1MtoIhsSNpfZhUkkKSWW2ew%3D"
+                            <Image
+                                src="https://ph16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-aiso/e7b9db475cba9fa98f1b7e055bf6712d~c5_100x100.jpeg?x-expires=1658988000&x-signature=Z8Dr1MtoIhsSNpfZhUkkKSWW2ew%3D"
                                 className={cx('user-avatar')}
                                 alt="Huynh Duc"
+                                fallback="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/a5ef93e1e5d9796331e926e2918ddc64.jpeg?x-expires=1659250800&x-signature=Z1vA6ed4SNYrlESX7zigW1zIsoU%3D"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
