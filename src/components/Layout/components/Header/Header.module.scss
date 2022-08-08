@@ -19,6 +19,10 @@
     justify-content: space-between;
 }
 
+.logo-link {
+    display: flex;
+}
+
 // actions
 .actions {
     display: flex;
@@ -45,7 +49,7 @@
     font-size: 1.4rem;
     font-weight: 600;
     color: var(--white-color);
-    font-family: 'ProximaNova', sans-serif;
+    font-family: var(--font-family);
     background-color: var(--primary-color);
 }
 
@@ -59,6 +63,7 @@
     object-fit: cover;
     border-radius: 50%;
     margin-left: 1.6rem;
+    cursor: pointer;
 }
 
 .more-btn {
