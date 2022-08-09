@@ -9,9 +9,9 @@ import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
-function AccountItem({ data }) {
+function AccountItem({ data, onClick }) {
     return (
-        <Link to={`/@${data.nickname}`} className={cx('wrapper')}>
+        <Link to={`/@${data.nickname}`} className={cx('wrapper')} onClick={onClick}>
             <Image src={data.avatar} alt={data.full_name} className={cx('avatar')} />
             <div className={cx('infor')}>
                 <h4 className={cx('username')}>
