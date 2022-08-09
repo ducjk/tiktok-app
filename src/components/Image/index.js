@@ -12,6 +12,7 @@ const Image = forwardRef(({ src, className, fallback: customFallback = images.no
     };
 
     return (
+        // eslint-disable-next-line jsx-a11y/alt-text
         <img
             ref={ref}
             className={classNames(styles.wrapper, className)}

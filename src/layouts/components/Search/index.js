@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
 
-import * as searchServices from '~/apiServices/searchService';
+import * as searchServices from '~/services/searchService';
 
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
 import HeadlessTippy from '@tippyjs/react/headless';
